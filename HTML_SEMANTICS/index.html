@@ -1,0 +1,67 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML SEMANTICS</title>
+    <style>
+      .container {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .top {
+        height: 10%;
+        background-color: rgb(68, 66, 66);
+        color: white;
+      }
+      .intro {
+        text-align: center;
+      }
+      .middle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgba(255, 245, 245, 0.978);
+        padding: 10px;
+      }
+      .intro2 {
+        line-height: 50px;
+        letter-spacing: 3px;
+        margin-left: 10px;
+      }
+      .btn {
+        margin: 10px;
+        padding: 10px;
+        background-color: rgb(40, 104, 125);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top"><h2 class="intro">Quiz on Important Facts</h2></div>
+      <div class="middle">
+        <h3 class="intro2">
+          Which one of these is a JavaScript Package manager?
+        </h3>
+        <form action="#">
+          <input type="radio" id="html" name="fav_language" value="HTML" />  
+          <label for="html">a: HTML</label><br />
+          <input type="radio" id="css" name="fav_language" value="CSS" />  
+          <label for="css">b: CSS</label><br />
+          <input type="radio" id="css" name="fav_language" value="CSS" />  
+          <label for="css">c: CSS</label><br />
+          <br />
+          <br />
+          <br />
+          <button class="btn">Previous Question</button>
+          <button class="btn">Next Question</button>
+        </form>
+      </div>
+      <div class="bottom"></div>
+    </div>
+  </body>
+</html>
