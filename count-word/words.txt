@@ -1,1 +1,3 @@
-Hello, My name is Jamiu Ismail, I just started my programming journey in python
+Hello, My name is Jamiu Ismail, I just started my programming journey in python.
+You are all welcome to my python programming path
+I love you guys
