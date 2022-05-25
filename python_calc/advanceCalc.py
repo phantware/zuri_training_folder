@@ -14,3 +14,4 @@ user_input = ""
 while user_input not in ["exit","quite","stop", "close"]:
  user_input = input("> ")
  output = calc.calculate(user_input)
+ print(output)
