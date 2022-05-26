@@ -1,4 +1,4 @@
-file = open("words.txt","r")
+file = open("later.txt","r")
 count = 0
 for line in file:
  words = line.split(" ")
