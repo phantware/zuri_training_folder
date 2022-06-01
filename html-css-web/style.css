@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+
+/* Navbar css here */
+.navbar {
+  background-color: #521751;
+}
+
+.nav {
+  align-items: center;
+  padding: 0 1rem;
+  display: flex;
+}
+
+.logo {
+  padding-left: 2.5rem;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.space {
+  flex: 1;
+}
+
+.links {
+  padding-right: 50px;
+}
+
+.links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.links li {
+  padding: 0 2.5rem;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+}
+
+.links a:hover,
+.links a:active {
+  color: #fa923f;
+}
+
+/* Footer css here  */
