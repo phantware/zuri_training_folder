@@ -3,11 +3,12 @@
 /* Navbar css here */
 .navbar {
   background-color: #521751;
+  height: 50px;
 }
 
 .nav {
   align-items: center;
-  padding: 0 1rem;
+  padding: 0.6rem 1rem;
   display: flex;
 }
 
@@ -110,4 +111,13 @@
   letter-spacing: 0.01em;
   color: #ffffff;
   cursor: pointer;
+}
+
+/* about  */
+.name {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #303030;
+  font-weight: 600;
+  margin-bottom: 30px;
 }
