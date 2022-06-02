@@ -7,6 +7,6 @@ if number > 0:
 
 elif number == 1:
      print("Number is Positive")
-else:
+else
    print("number is either positive or negative")
   
