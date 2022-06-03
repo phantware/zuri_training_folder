@@ -1,15 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+body {
+  background-color: #4d1549;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
 
 /* Navbar css here */
 .navbar {
-  background-color: #521751;
+  background-color: #4d1549;
+  width: 100%;
   height: 50px;
+  padding: 0;
+  margin: 0;
+  position: fixed;
 }
 
 .nav {
-  align-items: center;
   padding: 0.6rem 1rem;
   display: flex;
+  justify-content: space-between;
 }
 
 .logo {
@@ -28,7 +38,7 @@
 }
 
 .links {
-  padding-right: 50px;
+  padding-right: 10px;
 }
 
 .links ul {
@@ -55,9 +65,8 @@
 /* Footer css here  */
 .footer-container {
   display: flex;
-  /* align-items: center; */
   justify-content: space-around;
-  background-color: #521751;
+  background-color: #4d1549;
   color: white;
 }
 
@@ -88,36 +97,263 @@
   flex-shrink: 1;
 }
 
-.contactH4 {
-  font-size: 20px;
-  font-family: 'Courier New', Courier, monospace;
-  padding-right: 10px;
+/* About page start here */
+.about {
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
-.contactUl {
+
+.about-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+}
+
+.about-right {
+  flex: 1;
+}
+.a-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+}
+
+.a-right {
+  flex: 1;
+}
+
+.a-card.bg {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: #333;
+}
+
+.a-card {
+  width: 60%;
+  height: 70vh;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.a-img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.a-award-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+}
+
+.a-title {
+  font-weight: 400;
+}
+
+.a-sub {
+  margin: 20px 0px;
+  line-height: 30px;
+}
+
+.a-desc {
+  font-weight: 300;
+  margin-right: 50px;
+  line-height: 30px;
+}
+
+.a-award {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.a-award-texts {
+  width: 70%;
+}
+
+.a-award-title {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .about-left {
+    width: 100%;
+  }
+  .a-card {
+    height: 30vh;
+  }
+  .a-card.bg,
+  .a-award {
+    display: none;
+  }
+  .a-right {
+    padding: 20px;
+  }
+  .a-title {
+    font-size: 30px;
+    margin-top: 50px;
+  }
+  .a-desc,
+  .a-sub {
+    margin: 0px 10px;
+    font-size: 15px;
+  }
+}
+/* About page end here */
+
+/* Contact page start */
+
+.c {
+  height: auto;
+  padding: 50px;
+}
+
+.c-wrapper {
+  display: flex;
+  justify-self: space-between;
+}
+
+.c-left {
+  flex: 1;
+}
+
+.c-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.c-title {
+  font-size: 60px;
+  width: 80%;
+}
+
+.c-info-item {
+  display: flex;
+  align-items: center;
+  margin: 50px 0px;
+  font-weight: 300;
+  width: 70%;
+}
+
+.c-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.c-desc {
+  font-weight: 300;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input {
+  width: 50%;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 10px 0px;
+  font-size: 14px;
   padding-left: 10px;
-  /* margin-top: 10px; */
-  list-style: none;
 }
-.contactLi {
-  font-size: 18px;
-  line-height: 180%;
-  letter-spacing: 0.01em;
-  color: #ffffff;
+
+textarea {
+  width: 100%;
+  margin: 10px 0px;
+  font-size: 14px;
+  padding-left: 10px;
 }
-.contactLiSocial {
-  font-size: 18px;
-  line-height: 180%;
-  letter-spacing: 0.01em;
-  color: #ffffff;
+
+button {
+  border: none;
+  padding: 15px;
+  background-color: #59b256;
+  color: white;
+  font-weight: 500;
   cursor: pointer;
 }
 
-/* about  */
-.name {
-  font-size: 24px;
-  text-transform: uppercase;
-  color: #303030;
-  font-weight: 600;
-  margin-bottom: 30px;
+.cv {
+  text-transform: capitalize;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+  border: 1px solid white;
+  padding: 10px 15px;
+  background-color: black;
 }
+
+/* Contact page end */
+
+/* Login page starts here */
+.login-main {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  padding-top: 70px;
+}
+
+.login-desc {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 15px;
+  letter-spacing: 0.12em;
+  padding-left: 20px;
+}
+
+.login-form {
+  margin: 0px 62px;
+}
+.login-form-input {
+  padding: 12px;
+}
+p {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 10px;
+  letter-spacing: 0.12em;
+}
+.login-form-inputs {
+  width: 100%;
+  height: 10%;
+  border: 0.5px solid #0f4a7b;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.btn-submit {
+  width: 100%;
+  height: 10%;
+  font-size: 25px;
+  line-height: 10px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+/* Login page ends here */

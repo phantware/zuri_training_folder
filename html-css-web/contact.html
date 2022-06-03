@@ -4,12 +4,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-   <script src="https://use.fontawesome.com/your-embed-code.js"></script>
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
-
-
-   <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
     <title>PHANTWARE</title>
   </head>
   <body>
@@ -17,13 +15,12 @@
     <header class="navbar">
       <nav class="nav">
         <div class="logo">
-          <a href="/">79Chops</a>
+          <a href="index.html">PHANTWARE</a>
         </div>
-        <div class="space"></div>
         <div class="links">
           <ul>
             <li>
-              <a href="/">About Me</a>
+              <a href="index.html">About Me</a>
             </li>
             <li>
               <a href="contact.html">Contact</a>
@@ -40,65 +37,60 @@
     </header>
 
     <!--Conctact section-->
-    <div class="contact">
-      <h2>Contact</h2>
-      <h4 class="email-icon">
-         <i className='fas fa-phone icon'></i>
-
-          <i class="fa fa-envelope"></i>
-         	<i class="fab fa-github-square"><a href="https://github.com/willyblackkeez" id="profile-link"></a></i>
-	<i class="fab fa-facebook"></i>
-          jorge.crespo92@gmail.com</i
-        >
-      </h4>
-      <br />
-      <div class="row">
-        <div class="col-sm-3 col-xs-3">
-          <a
-            href="https://www.linkedin.com/in/jorge-crespo"
-            class="btn btn-default round-btn"
-            role="button"
-            target="_blank"
-            ><i class="fa fa-linkedin logo-small" aria-hidden="true"></i
-          ></a>
+    <div class="c">
+      <div class="c-wrapper">
+        <div class="c-left">
+          <h1 class="c-title">Let's discuss your project</h1>
+          <div class="c-info">
+            <div class="c-info-item">
+              <img src="./img/phone.png" alt="phone icon" class="c-icon" />
+              (+234) 8187 273154
+            </div>
+            <div class="c-info-item">
+              <img class="c-icon" src="./img/email.png" alt="" />
+              phantmoney2011@gmail.com
+            </div>
+            <div class="c-info-item">
+              <img class="c-icon" src="./img/address.png" alt="" />
+              112 Isiba Oluwo Street, Egbeda, Lagos Nigeria
+            </div>
+            <div class="c-info-item">
+              <a
+                class="cv"
+                tabindex="0"
+                download
+                href="/assets/Ismail-Jamiu-Resume.pdf"
+              >
+                Download my CV
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-3 col-xs-3">
-          <a
-            href="https://www.facebook.com/jorge.crespodonoso"
-            class="btn btn-default round-btn"
-            role="button"
-            target="_blank"
-            ><i
-              class="fa fa-facebook-official logo-small"
-              aria-hidden="true"
-            ></i
-          ></a>
-        </div>
-        <div class="col-sm-3 col-xs-3">
-          <a
-            href="https://github.com/georgus92"
-            class="btn btn-default round-btn"
-            role="button"
-            target="_blank"
-            ><i class="fa fa-github logo-small" aria-hidden="true"></i
-          ></a>
-        </div>
-        <div class="col-sm-3 col-xs-3">
-          <a
-            href="https://www.freecodecamp.org/georgus92"
-            class="btn btn-default round-btn"
-            role="button"
-            target="_blank"
-            ><i
-              class="fa fa fa-free-code-camp logo-small"
-              aria-hidden="true"
-            ></i
-          ></a>
+        <div class="c-right">
+          <p class="c-desc">
+            <b>What’s your story?</b> Get in touch. Always available for
+            freelancing if the right project comes along.
+          </p>
+          <form ref="{formRef}" onSubmit="{handleSubmit}">
+            <input style={{ backgroundColor: darkMode && '#333', color: darkMode
+            && 'white', }} type='text' placeholder='Name' name='user_name'
+            required /> <input style={{ backgroundColor: darkMode && '#333',
+            color: darkMode && 'white', }} type='text' placeholder='Subject'
+            name='user_subject' required /> <input style={{ backgroundColor:
+            darkMode && '#333', color: darkMode && 'white', }} type='text'
+            placeholder='Email' name='user_email' required />
+            <textarea
+              placeholder="Message"
+              name="message"
+              rows="5"
+              required
+            ></textarea>
+            <button>Submit</button>
+          </form>
         </div>
       </div>
     </div>
     <!--End of contact-->
-    <h1>Contact Page</h1>
     <!-- Footer goes here -->
     <div class="footer-container">
       <div class="leftFooter">
