@@ -68,6 +68,7 @@ body {
   justify-content: space-around;
   background-color: #4d1549;
   color: white;
+  padding-top: 70px;
 }
 
 .leftFooter {
@@ -76,7 +77,8 @@ body {
 .footerDate {
   font-size: 20px;
   align-items: center;
-  padding-left: 50px;
+  line-height: 10px;
+  padding-left: 70px;
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -96,7 +98,30 @@ body {
   /* margin-top: 20px; */
   flex-shrink: 1;
 }
-
+.contactH4 {
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  padding-right: 10px;
+}
+.contactUl {
+  width: 100%;
+  padding-left: 10px;
+  /* margin-top: 10px; */
+  list-style: none;
+}
+.contactLi {
+  font-size: 18px;
+  line-height: 180%;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+.contactLiSocial {
+  font-size: 18px;
+  line-height: 180%;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  cursor: pointer;
+}
 /* About page start here */
 .about {
   height: 100vh;
