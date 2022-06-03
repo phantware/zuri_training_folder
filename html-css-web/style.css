@@ -30,7 +30,6 @@ body {
   color: white;
   text-decoration: none;
   font-size: 1.5rem;
-  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .space {
@@ -79,7 +78,6 @@ body {
   align-items: center;
   line-height: 10px;
   padding-left: 70px;
-  font-family: 'Courier New', Courier, monospace;
 }
 
 .rightFooter {
@@ -95,18 +93,15 @@ body {
   flex-shrink: 1;
 }
 .rightFooter3 {
-  /* margin-top: 20px; */
   flex-shrink: 1;
 }
 .contactH4 {
   font-size: 20px;
-  font-family: 'Courier New', Courier, monospace;
   padding-right: 10px;
 }
 .contactUl {
   width: 100%;
   padding-left: 10px;
-  /* margin-top: 10px; */
   list-style: none;
 }
 .contactLi {
@@ -289,35 +284,42 @@ body {
 
 .c-desc {
   font-weight: 300;
+  line-height: 30px;
+  padding: 30px;
 }
 
-form {
+.contactForm {
   margin-top: 20px;
 }
 
-input {
+.contactInput {
   width: 50%;
   height: 50px;
   border: none;
+  border-radius: 10px;
   border-bottom: 1px solid black;
   margin: 10px 0px;
   font-size: 14px;
   padding-left: 10px;
 }
 
-textarea {
+.contactTextArea {
   width: 100%;
   margin: 10px 0px;
   font-size: 14px;
   padding-left: 10px;
+  border-radius: 10px;
 }
 
-button {
+.contactBtn {
+  width: 100%;
   border: none;
   padding: 15px;
   background-color: #59b256;
   color: white;
   font-weight: 500;
+  font-size: 30px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
