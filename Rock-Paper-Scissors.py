@@ -2,6 +2,9 @@ import random
 
 input("Welcome to Rock, Paper and Scissors! Press enter to start ")
 
+user_score = 0
+cpu_score = 0
+
 while True:
  print()
  user_choice = input("Rock, Paper, or Scissors?: ").lower()
@@ -27,21 +30,40 @@ while True:
    print("It's a tie!")
   elif cpu_choice == "paper":
    print("You lost!")
+   cpu_score += 1
   elif cpu_choice == "scissors":
    print("You win!")
-
+   user_score += 1
+   
  elif user_choice == "paper":
   if cpu_choice == "paper":
    print("It's a tie!")
   elif cpu_choice == "scissors":
    print("You lost!")
+   cpu_score += 1
   elif cpu_choice == "rock":
    print("You win!")
+   user_score += 1
 
  elif user_choice == "scissors":
   if cpu_choice == "scissors":
    print("It's a tie!")
   elif cpu_choice == "rock":
    print("You lost!")
+   cpu_score += 1
   elif cpu_choice == "paper":
    print("You win!")
+   user_score += 1
+ 
+ print()
+ print("You have", user_score, "wins")
+ print("The Computer has", cpu_score, "wins")
+ print()
+
+ repeat = input("Play again? (Y/N) ").lower()
+ while repeat != "n" and repeat !="y":
+  repeat = input("Invalid input, please try again: ").lower()
+
+ if repeat == "n":
+  break
+ print("\n----------------------------------------------------\n")
