@@ -1,7 +1,9 @@
 import random
-from traceback import print_tb
 
-user_choice = input("Rock, Paper, or Scissors: ")
+user_choice = input("Rock, Paper, or Scissors: ").lower()
+
+while user_choice != "rock" and user_choice != "paper" and user_choice != "scissors":
+ user_choice = input("Invalid input, please try again: ").lower()
 
 random_num = random.randint(0,2)
 if random_num == 0:
