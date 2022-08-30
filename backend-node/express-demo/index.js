@@ -31,7 +31,7 @@ app.get('/api/posts/:year/:month', (req, res) => {
   return res.status(200).json(req.query)
 })
 
-app.post('/api/course', (req, res) => {
+app.post('/api/courses', (req, res) => {
   const course = {
     id: courses.length + 1,
     name: req.body.name,
