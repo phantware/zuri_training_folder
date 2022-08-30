@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-
+app.use(express.json())
 const courses = [
   { id: 1, name: 'course 1' },
   { id: 2, name: 'course 2' },
@@ -29,6 +29,16 @@ app.get('/api/courses/:id', (req, res) => {
 
 app.get('/api/posts/:year/:month', (req, res) => {
   return res.status(200).json(req.query)
+})
+
+app.post('/api/course', (req, res) => {
+  const course = {
+    id: courses.length + 1,
+    name: req.body.name,
+  }
+  courses.push(course)
+
+  return res.status(201).json(course)
 })
 
 const port = process.env.PORT || 3000
