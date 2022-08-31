@@ -52,6 +52,27 @@ app.post('/api/courses', (req, res) => {
   return res.status(201).json(course)
 })
 
+app.put('/api/courses/:id', (req, res) => {
+  //Lookup the course
+  //If not existing, return 404
+  const course = courses.find((c = c.id === parseInt(req.params.id)))
+  if (!course) {
+    return res.status(400).json('Course not found')
+  }
+
+  //Validate
+  // If invalid, return 404 - Bad request
+  const schema = Joi.object({
+    name: Joi.string().min(3).required(),
+  })
+  const validation = schema.validate(req.body)
+  if (validation.error) {
+    return res.status(400).json(validation.error.details[0].message)
+  }
+  course.name = req.body.name
+  return res.status(200).json(course)
+})
+
 const port = process.env.PORT || 3000
 
 app.listen(port, () => console.log(`App running at port ${port}`))
