@@ -68,6 +68,21 @@ app.put('/api/courses/:id', (req, res) => {
   return res.status(200).json(course)
 })
 
+app.delete('/api/courses/:id', (req, res) => {
+  // Lookup the course
+  // Not existing, return 404
+  const course = courses.find((c) => c.id === parseInt(req.params.id))
+  if (!course) {
+    return res.status(404).json('The course with the given ID was not found')
+  }
+
+  // Delete course
+  const index = courses.indexOf(course)
+  courses.splice(index, 1)
+
+  // Return same course
+  return res.status(200).json(course)
+})
 const validateCourse = (course) => {
   const schema = Joi.object({
     name: Joi.string().min(3).required(),
