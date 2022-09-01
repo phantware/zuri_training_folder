@@ -4,7 +4,17 @@ const express = require('express')
 const morgan = require('morgan')
 const app = express()
 app.use(express.json())
-app.use(morgan('tiny'))
+app.use(express.urlencoded({ extended: true }))
+
+//checking the environment variable if it's set to development or undefined
+console.log(`NODE_PROCESS.ENV: ${process.env.NODE_ENV}`)
+console.log(`app: ${app.get('env')}`)
+
+//if the env is set to development, enable morgan
+if (app.get('env') === 'development') {
+  app.use(morgan('tiny'))
+  console.log('Morgan enabled')
+}
 
 app.use(log)
 
