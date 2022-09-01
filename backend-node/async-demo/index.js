@@ -7,21 +7,25 @@ function getRepositories(user) {
   getRepositories(user.githubUsername, getCommits)
 }
 function getCommits(repo) {
-  getCommits(repo, displayCommits)
+  getCommits(repo[0], displayCommits)
 }
 function displayCommits(commits) {
   console.log('commits', commits)
 }
 
-function getUser(id, callback) {
-  setTimeout(() => {
-    console.log('Reading a user from a database...')
-    callback({ id: id, githubUsername: 'jamiu' })
-  }, 2000)
+function getUser(id) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log('Reading a user from a database...')
+      resolve({ id: id, githubUsername: 'jamiu' })
+    }, 2000)
+  })
 }
 
-function getRepositories(username, callback) {
-  setTimeout(() => {
-    callback(['repo 1', 'repo 2', 'repo 3'])
-  }, 2000)
+function getRepositories(username) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(['repo 1', 'repo 2', 'repo 3'])
+    }, 2000)
+  })
 }
