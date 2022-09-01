@@ -1,3 +1,4 @@
+const config = require('config')
 const Joi = require('joi')
 const log = require('./logger')
 const express = require('express')
@@ -6,15 +7,20 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-//checking the environment variable if it's set to development or undefined
-console.log(`NODE_PROCESS.ENV: ${process.env.NODE_ENV}`)
-console.log(`app: ${app.get('env')}`)
+//Configuration
+console.log('Applicatio Name: ' + config.get('name'))
+console.log('Mail Server: ' + config.get('mail.host'))
+console.log('Mail Password: ' + config.get('mail.password'))
 
 //if the env is set to development, enable morgan
 if (app.get('env') === 'development') {
   app.use(morgan('tiny'))
   console.log('Morgan enabled')
 }
+
+//checking the environment variable if it's set to development or undefined
+console.log(`NODE_PROCESS.ENV: ${process.env.NODE_ENV}`)
+console.log(`app: ${app.get('env')}`)
 
 app.use(log)
 
