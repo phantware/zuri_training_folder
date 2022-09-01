@@ -1,7 +1,9 @@
 console.log('Before')
 getUser(1, function (user) {
   getRepositories(user.githubUsername, function (repo) {
-    console.log('Repo', repo)
+    getCommits(repo, (commits) => {
+      console.log('commits', commits)
+    })
   })
 })
 
