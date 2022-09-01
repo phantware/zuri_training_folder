@@ -1,13 +1,17 @@
 console.log('Before')
-getUser(1, function (user) {
-  getRepositories(user.githubUsername, function (repo) {
-    getCommits(repo, (commits) => {
-      console.log('commits', commits)
-    })
-  })
-})
+getUser(1, getRepositories)
 
 console.log('After')
+// We use named functio to resolve callback hell
+function getRepositories(user) {
+  getRepositories(user.githubUsername, getCommits)
+}
+function getCommits(repo) {
+  getCommits(repo, displayCommits)
+}
+function displayCommits(commits) {
+  console.log('commits', commits)
+}
 
 function getUser(id, callback) {
   setTimeout(() => {
