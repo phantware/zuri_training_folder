@@ -1,6 +1,5 @@
 const startupDebugger = require('debug')('app:startup')
 const dbDebugger = require('debug')('app:db')
-
 const config = require('config')
 const Joi = require('joi')
 const log = require('./logger')
@@ -9,6 +8,8 @@ const morgan = require('morgan')
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.set('view engine', 'pug')
+app.set('views', './views')
 
 //Configuration
 console.log('Applicatio Name: ' + config.get('name'))
@@ -40,7 +41,7 @@ const courses = [
 ]
 
 app.get('/', (req, res) => {
-  return res.status(200).json('hello world')
+  return res.render('index', { title: 'My Express App', message: 'Hello' })
 })
 
 app.get('/api/courses', (req, res) => {
