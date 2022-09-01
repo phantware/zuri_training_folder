@@ -1,3 +1,6 @@
+const startupDebugger = require('debug')('app:startup')
+const dbDebugger = require('debug')('app:db')
+
 const config = require('config')
 const Joi = require('joi')
 const log = require('./logger')
@@ -15,8 +18,9 @@ console.log('Mail Password: ' + config.get('mail.password'))
 //if the env is set to development, enable morgan
 if (app.get('env') === 'development') {
   app.use(morgan('tiny'))
-  console.log('Morgan enabled')
+  startupDebugger('Morgan enabled')
 }
+dbDebugger('Conected to database')
 
 //checking the environment variable if it's set to development or undefined
 console.log(`NODE_PROCESS.ENV: ${process.env.NODE_ENV}`)
