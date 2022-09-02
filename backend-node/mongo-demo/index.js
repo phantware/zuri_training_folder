@@ -18,13 +18,27 @@ mongoose.connection.on('disconnected', () => {
   console.log('mongoDB disconnected!')
 })
 
-const courseSchema = new mongoose.Schema({
+const courseSchema = mongoose.Schema({
   name: String,
   author: String,
   tags: [String],
   date: { type: Date, default: Date.now },
   isPublished: Boolean,
 })
+
+const Course = mongoose.model('Course', courseSchema)
+async function createCourse() {
+  const course = new Course({
+    name: 'Nodejs Course',
+    author: 'Jamiu',
+    tags: ['node', 'backend'],
+    isPublished: true,
+  })
+  const result = await course.save()
+  console.log(result)
+}
+
+createCourse()
 
 app.listen(PORT, () => {
   connect()
