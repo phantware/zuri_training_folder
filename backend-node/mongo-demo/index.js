@@ -18,6 +18,14 @@ mongoose.connection.on('disconnected', () => {
   console.log('mongoDB disconnected!')
 })
 
+const courseSchema = new mongoose.Schema({
+  name: String,
+  author: String,
+  tags: [String],
+  date: { type: Date, default: Date.now },
+  isPublished: Boolean,
+})
+
 app.listen(PORT, () => {
   connect()
   console.log(`Server is runing at port ${PORT}.`)
