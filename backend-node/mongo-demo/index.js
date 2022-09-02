@@ -17,3 +17,8 @@ const connect = async () => {
 mongoose.connection.on('disconnected', () => {
   console.log('mongoDB disconnected!')
 })
+
+app.listen(PORT, () => {
+  connect()
+  console.log(`Server is runing at port ${PORT}.`)
+})
