@@ -38,7 +38,17 @@ async function createCourse() {
   console.log(result)
 }
 
-createCourse()
+// createCourse()
+
+async function getCourse() {
+  const courses = await Course.find({ author: 'Jamiu', isPublished: true })
+    .limit(1)
+    .sort({ name: 1 })
+    .select({ name: 1, tags: 1 })
+
+  console.log(courses)
+}
+getCourse()
 
 app.listen(PORT, () => {
   connect()
