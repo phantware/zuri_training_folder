@@ -83,6 +83,14 @@ getCourse()
  * to get number of documents use count
  * .count()
  *
+ * Pagination
+ * to implement pagination use skip(), skip goes hand in hand with limit method
+ *  const pageNumber = 2
+ *  const pageSize = 10
+ *  .skip((pageNumber - 1) * pageSize)
+ *  .limit(pageSize)
+ *
+ *
  */
 app.listen(PORT, () => {
   connect()
