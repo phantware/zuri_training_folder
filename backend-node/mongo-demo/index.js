@@ -61,6 +61,10 @@ getCourse()
  * lte = less than or equal to   course.find({price: {$lte: 10}})
  * in    course.find({price: {$in: [10, 15, 20]}})
  * nin = not in
+ *
+ * Logical Operator
+ * or     or([{author: "Jamiu"},{isPublished:true}])
+ * and    and([{author: "Jamiu"},{isPublished:true}])
  */
 app.listen(PORT, () => {
   connect()
