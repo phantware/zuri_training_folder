@@ -46,6 +46,7 @@ async function getCourse() {
     .limit(1)
     .sort({ name: 1 })
     .select({ name: 1, tags: 1 })
+  // .count()
 
   console.log(courses)
 }
@@ -78,6 +79,9 @@ getCourse()
  *
  * or the word contais Mosh use the below query
  * couse.find({author: /.*Mosh./}) make sure it ends with * before /
+ *
+ * to get number of documents use count
+ * .count()
  *
  */
 app.listen(PORT, () => {
