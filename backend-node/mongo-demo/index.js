@@ -51,8 +51,31 @@ async function getCourse() {
   console.log(courses)
 }
 
-getCourse()
+// getCourse()
 
+async function updateCourse(id) {
+  /**
+   *  Approach1: Query First
+   *  findById()
+   *  Modify it's properties
+   *  save()
+   *
+   *  Approach2: Update first
+   *  Update directly
+   *  Optionally: get the updated document
+   */
+
+  //First approach
+  const course = await Course.findById(id)
+  if (!course) return
+
+  course.isPublished = true
+  course.author = 'Another Author'
+
+  const result = await course.save()
+  console.log(result)
+}
+updateCourse()
 /**
  * Comparison Query Operators
  * eq = equal
