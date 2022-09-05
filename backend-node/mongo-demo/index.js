@@ -42,6 +42,7 @@ async function createCourse() {
 
 async function getCourse() {
   const courses = await Course.find({ author: 'Jamiu', isPublished: true })
+    // .find({ author: /.*Mosh.*/i })
     .limit(1)
     .sort({ name: 1 })
     .select({ name: 1, tags: 1 })
@@ -65,6 +66,19 @@ getCourse()
  * Logical Operator
  * or     or([{author: "Jamiu"},{isPublished:true}])
  * and    and([{author: "Jamiu"},{isPublished:true}])
+ *
+ * Regular Expression
+ * Getting course that author starts with Mosh use the below regular expression
+ *
+ * /pattern/   =  /^Mosh/  course.find({author: /^Mosh/})
+ *
+ * Getting course that author ends with Hamedani use the below regular expression
+ *
+ * /pattern/  = /^Hamedani$/ ($ sign indicate end of a string) course.find({author: /Hamedani$/}) to make the expression case insensitive use (i) at the end course.find({author: /Hamedani$/i})
+ *
+ * or the word contais Mosh use the below query
+ * couse.find({author: /.*Mosh./}) make sure it ends with * before /
+ *
  */
 app.listen(PORT, () => {
   connect()
