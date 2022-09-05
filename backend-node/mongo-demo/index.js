@@ -48,8 +48,20 @@ async function getCourse() {
 
   console.log(courses)
 }
+
 getCourse()
 
+/**
+ * Comparison Query Operators
+ * eq = equal
+ * ne = not equal
+ * gt = greather than       course.find({price: {$gt: 10}})
+ * gte = greather than or equal to      course.find({price: {$gte: 10}})
+ * lt = less than    course.find({price: {$lt: 10}})
+ * lte = less than or equal to   course.find({price: {$lte: 10}})
+ * in    course.find({price: {$in: [10, 15, 20]}})
+ * nin = not in
+ */
 app.listen(PORT, () => {
   connect()
   console.log(`Server is runing at port ${PORT}.`)
