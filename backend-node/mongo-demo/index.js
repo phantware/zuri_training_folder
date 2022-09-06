@@ -19,11 +19,24 @@ mongoose.connection.on('disconnected', () => {
 })
 
 const courseSchema = mongoose.Schema({
-  name: { type: String, required: true },
+  name: { type: String, required: true, minlength: 5, maxlength: 255 },
+  category: {
+    type: String,
+    required: true,
+    enum: ['web', 'mobile', 'networking'],
+  },
   author: String,
   tags: [String],
   date: { type: Date, default: Date.now },
   isPublished: Boolean,
+  price: {
+    type: Number,
+    min: 10,
+    max: 200,
+    required: function () {
+      return this.isPublished
+    },
+  },
 })
 
 const Course = mongoose.model('Course', courseSchema)
@@ -38,7 +51,7 @@ async function createCourse() {
     const result = await course.save()
     console.log(result)
   } catch (err) {
-    console.log(err)
+    console.log(err.message)
   }
 }
 
