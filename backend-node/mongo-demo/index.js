@@ -85,6 +85,14 @@ async function updateCourse(id) {
   // console.log(result)
 }
 updateCourse('dhdhdhdw393')
+
+async function removeCourse(id) {
+  const course = await Course.deleteOne({ _id: id })
+
+  console.log(course)
+}
+removeCourse('jdjjdjdj')
+
 /**
  * Comparison Query Operators
  * eq = equal
