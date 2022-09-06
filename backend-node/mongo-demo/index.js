@@ -19,7 +19,7 @@ mongoose.connection.on('disconnected', () => {
 })
 
 const courseSchema = mongoose.Schema({
-  name: String,
+  name: { type: String, required: true },
   author: String,
   tags: [String],
   date: { type: Date, default: Date.now },
@@ -34,8 +34,12 @@ async function createCourse() {
     tags: ['angular', 'frontend'],
     isPublished: true,
   })
-  const result = await course.save()
-  console.log(result)
+  try {
+    const result = await course.save()
+    console.log(result)
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 // createCourse()
