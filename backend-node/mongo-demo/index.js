@@ -66,16 +66,25 @@ async function updateCourse(id) {
    */
 
   //First approach
-  const course = await Course.findById(id)
-  if (!course) return
+  const course = await Course.findByIdAndUpdate(
+    id,
+    {
+      $set: { author: 'Jason', isPublished: false },
+    },
+    { new: true }
+  )
 
-  course.isPublished = true
-  course.author = 'Another Author'
+  console.log(course)
+  // const course = await Course.findById(id)
+  // if (!course) return
 
-  const result = await course.save()
-  console.log(result)
+  // course.isPublished = true
+  // course.author = 'Another Author'
+
+  // const result = await course.save()
+  // console.log(result)
 }
-updateCourse()
+updateCourse('dhdhdhdw393')
 /**
  * Comparison Query Operators
  * eq = equal
