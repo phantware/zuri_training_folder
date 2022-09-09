@@ -54,14 +54,19 @@ async function createCourse() {
   const course = new Course({
     name: 'Angular Course',
     author: 'Jamiu',
-    tags: ['angular', 'frontend'],
+    category: '-',
+    // tags: ['angular', 'frontend'],
+    tags: null,
     isPublished: true,
+    price: 15,
   })
   try {
     const result = await course.save()
     console.log(result)
-  } catch (err) {
-    console.log(err.message)
+  } catch (ex) {
+    // console.log(err.message)
+    // ex.errors.category
+    for (field in ex.errors) console.log(ex.errors[field].message)
   }
 }
 
