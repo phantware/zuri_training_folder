@@ -26,7 +26,17 @@ const courseSchema = mongoose.Schema({
     enum: ['web', 'mobile', 'networking'],
   },
   author: String,
-  tags: [String],
+  // tags: [String],
+  tags: {
+    type: Array,
+    validator: function (v, callback) {
+      setTimeout(() => {
+        const result = v && v.length > 0
+        callback(result)
+      }, 4000)
+    },
+    message: 'A course should have at least one tag',
+  },
   date: { type: Date, default: Date.now },
   isPublished: Boolean,
   price: {
