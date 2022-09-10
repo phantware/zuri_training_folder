@@ -12,26 +12,35 @@
 //   }
 // }
 
-let myButton = document.querySelector('button')
-let myHeading = document.querySelector('h1')
+// let myButton = document.querySelector('button')
+// let myHeading = document.querySelector('h1')
 
-function setUserName() {
-  const myName = prompt('Please enter your name')
-  if (!myName) {
-    setUserName()
-  } else {
-    localStorage.setItem('name', myName)
-    myHeading.textContent = `Mozillar is cool, ${myName}`
-  }
-}
+// function setUserName() {
+//   const myName = prompt('Please enter your name')
+//   if (!myName) {
+//     setUserName()
+//   } else {
+//     localStorage.setItem('name', myName)
+//     myHeading.textContent = `Mozillar is cool, ${myName}`
+//   }
+// }
 
-if (!localStorage.getItem('name')) {
-  setUserName()
-} else {
-  const storeName = localStorage.getItem('name')
-  myHeading.textContent = `Mozilla is cool, ${storeName}`
-}
+// if (!localStorage.getItem('name')) {
+//   setUserName()
+// } else {
+//   const storeName = localStorage.getItem('name')
+//   myHeading.textContent = `Mozilla is cool, ${storeName}`
+// }
 
-myButton.onclick = () => {
-  setUserName()
+// myButton.onclick = () => {
+//   setUserName()
+// }
+
+const buttonlevel = document.querySelector('button')
+const headingLevel = document.querySelector('h2')
+
+buttonlevel.onclick = () => {
+  const name = prompt('Enter your name')
+  alert(`Hello ${name}, nice to see you`)
+  headingLevel.textContent = `Welcome ${name}`
 }
