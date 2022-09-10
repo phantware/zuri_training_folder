@@ -36,11 +36,11 @@
 //   setUserName()
 // }
 
-const buttonlevel = document.querySelector('button')
-const headingLevel = document.querySelector('h2')
+// const buttonlevel = document.querySelector('button')
+// const headingLevel = document.querySelector('h2')
 
-buttonlevel.onclick = () => {
-  const name = prompt('Enter your name')
-  alert(`Hello ${name}, nice to see you`)
-  headingLevel.textContent = `Welcome ${name}`
-}
+// buttonlevel.onclick = () => {
+//   const name = prompt('Enter your name')
+//   alert(`Hello ${name}, nice to see you`)
+//   headingLevel.textContent = `Welcome ${name}`
+// }
