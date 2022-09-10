@@ -60,9 +60,9 @@ async function listCourses() {
   console.log(courses)
 }
 
-createAuthor('Mosh', 'My bio', 'My Website')
+// createAuthor('Mosh', 'My bio', 'My Website')
 
-// createCourse('Node Course', 'authorId')
+createCourse('Node Course', '631c5906bb50266869c1aaa0')
 
 // listCourses();
 
