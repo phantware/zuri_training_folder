@@ -31,6 +31,7 @@ const Course = mongoose.model(
   'Course',
   mongoose.Schema({
     name: String,
+    author: { type: mongoose.Schema.Types.ObjectId, ref: 'Author' },
   })
 )
 
