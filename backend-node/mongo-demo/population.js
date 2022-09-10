@@ -57,15 +57,15 @@ async function createCourse(name, author) {
 }
 
 async function listCourses() {
-  const courses = await Course.find().select('name')
+  const courses = await Course.find().populate('author').select('name author')
   console.log(courses)
 }
 
 // createAuthor('Mosh', 'My bio', 'My Website')
 
-createCourse('Node Course', '631c5906bb50266869c1aaa0')
+// createCourse('Node Course', '631c5906bb50266869c1aaa0')
 
-// listCourses();
+listCourses()
 
 app.listen(PORT, () => {
   connect()
