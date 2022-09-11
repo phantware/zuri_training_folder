@@ -19,15 +19,24 @@
   </body>
 
   <script>
-    const person = {
-      name: { first: 'Bob', last: 'Smith' },
-      age: 32,
-      bio() {
-        console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old`)
-      },
-      introduceSelf() {
-        console.log(`Hi, I am ${this.name[0]}`)
-      },
+    // const person = {
+    //   name: { first: 'Bob', last: 'Smith' },
+    //   age: 32,
+    //   bio() {
+    //     console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old`)
+    //   },
+    //   introduceSelf() {
+    //     console.log(`Hi, I am ${this.name[0]}`)
+    //   },
+    // }
+
+    function createPerson(name) {
+      const obj = {}
+      obj.name = name
+      obj.introduceSelf = function () {
+        console.log(`Hi, I'm ${this.name}`)
+      }
+      return obj
     }
   </script>
 </html>
