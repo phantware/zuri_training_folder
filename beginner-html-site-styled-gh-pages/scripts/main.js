@@ -44,3 +44,14 @@
 //   alert(`Hello ${name}, nice to see you`)
 //   headingLevel.textContent = `Welcome ${name}`
 // }
+
+const textBox = document.querySelector('#textBox')
+const output = document.querySelector('#output')
+
+function logKey(event) {
+  console.log(`You pressed "${event.key}".`)
+}
+
+textBox.addEventListener('keydown', function (event) {
+  console.log(`You pressed "${event.key}".`)
+})
