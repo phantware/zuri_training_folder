@@ -19,12 +19,3 @@
 // const myPerson = new Person('Manu', 23)
 // console.log(myPerson.age) // 23
 // console.log(myPerson.stringSentence()) // "Hello, my name is Manu and I'm 23
-
-const months = ['March', 'Jan', 'Feb', 'Dec']
-
-// This function returns the length of the array for instance jan is less than feb, dec and feb are thesame length, it returns one of it an march comes last which is greater tha all
-function len_compare(a, b) {
-  return a.length - b.length
-}
-months.sort(len_compare)
-console.log('months', months)
