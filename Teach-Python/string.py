@@ -87,3 +87,101 @@ Here are some more examples:
 "yellow" <= "fellow" # False
 
 "abc" > "" # True
+
+# Iterating string using for loop
+# String is a sequence type and also iterable using for loop (to learn more about for loop click here ).
+
+s = "hello"
+for i in s:
+  print(i, end="") # hello
+
+"""
+Testing strings
+String class in python has various inbuilt methods which allows to check for different types of strings.
+
+Method name	       Method Description
+isalnum()	         Returns True if string is alphanumeric
+isalpha()	         Returns True if string contains only alphabets
+isdigit()	         Returns True if string contains only digits
+isidentifier()	    Return True is string is valid identifier
+islower()	         Returns True if string is in lowercase
+isupper()	         Returns True if string is in uppercase
+isspace()	         Returns True if string contains only whitespace
+"""
+s = "welcome to python"
+s.isalnum() # False
+
+"Welcome".isalpha() # True
+
+"2012".isdigit() # True
+
+"first Number".isidentifier() # False
+
+s.islower() # True
+
+"WELCOME".isupper() # True
+
+"  \t".isspace() # True
+
+"""
+Searching for Substrings
+
+Method Name	                    Methods Description
+
+endswith(s1: str): bool	        Returns True if strings ends with substring s1
+startswith(s1: str): bool	      Returns True if strings starts with substring s1
+count(substring): int	          Returns number of occurrences of substring the string
+find(s1): int	                  Returns lowest index from where s1 starts in the string, if string not
+                                found returns -1
+rfind(s1): int	                 Returns highest index from where s1 starts in the string, if string not
+                                found returns -1
+"""
+
+s = "welcome to python"
+s.endswith("thon") # True
+
+s.startswith("good") # False
+
+s.find("come") # 3
+
+s.find("become") # -1
+
+s.rfind("o") # 15
+
+s.count("o") # 3
+
+"""
+Converting Strings
+
+Method name	           Method Description
+capitalize(): str	     Returns a copy of this string with only the first character capitalized.
+lower(): str	          Return string by converting every character to lowercase
+upper(): str	          Return string by converting every character to uppercase
+title(): str	          This function return string by capitalizing first letter of every word in the string
+swapcase(): str	       Return a string in which the lowercase letter is converted to uppercase and
+                       uppercase to lowercase
+replace(old\, new):str	This function returns new string by replacing the occurrence of old string with new
+                        string
+"""
+
+s = "string in python"
+
+s1 = s.capitalize()
+s1 # 'String in python'
+
+s2 = s.title()
+s2 # 'String In Python'
+
+s = "This Is Test"
+s3 = s.lower()
+s3 # 'this is test'
+
+s4 = s.upper()
+s4 # 'THIS IS TEST'
+
+s5 = s.swapcase()
+s5 # 'tHIS iS tEST'
+
+s6 = s.replace("Is", "Was")
+s6 # 'This Was Test'
+s # 'This Is Test'
