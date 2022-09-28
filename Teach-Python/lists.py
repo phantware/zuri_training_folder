@@ -165,4 +165,4 @@ list3 = [ x for x in range(10) if x % 2 == 0 ]
 list3 #  [0, 2, 4, 6, 8]
 
 list4 = [ x *2 for x in range(10) if x % 2 == 0 ]
-[0, 4, 8, 12, 16]
+list4 #  [0, 4, 8, 12, 16]
