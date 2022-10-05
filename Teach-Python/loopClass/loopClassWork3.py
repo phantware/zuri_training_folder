@@ -61,5 +61,20 @@ print("#")
   
 
 
-
+# Another Angle
+# i = 1
+# add = 1
+# hashtag = '#'
+# space = ' '
+# height = int(input("How tall is the tree: ")) + 1
+# center = height - 1
+# spaces = height
+# while i != 0:
+#     spaces -= 1
+#     if i == height:
+#         print(space * center + hashtag)
+#         break
+#     print(space * spaces + hashtag * add)
+#     add += 2
+#     i += 1
 
