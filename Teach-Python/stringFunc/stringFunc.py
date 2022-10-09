@@ -23,9 +23,14 @@ a_list_2 = rand_string.split()
  # print(i)
 
 count = input("Enter the value: ")
-print(f"How many times does {count} appeard? ", a_list_2.count(count))
-print(f"Where is {count} index? ", rand_string.find(count))
-print(f"Replace {count} result? ", rand_string.replace("is", "was"))
+# print(f"How many times does {count} appeard? ", a_list_2.count(count))
+# print(f"Where is {count} index? ", rand_string.find(count))
+# print(f"Replace {count} result? ", rand_string.replace("is", "was"))
+print(f"Does the sentence countain {count}? ", count in rand_string)
+
+
+
+
 
 
 
