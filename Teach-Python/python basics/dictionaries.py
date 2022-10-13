@@ -2,9 +2,34 @@
 
 # Dictionaries can be created using a pair of curly braces ({}). Each item in the dictionary consists of a key, followed by a colon, which is followed by a value. And each item is separated using commas (,). Let's take an example.
 
+dictionary = {
+'a': [1,2,3,4],
+'b':'hello',
+'c':True
+}
+print(dictionary)  #  {'a': [1,2,3,4], 'b': 'hello', 'c':True}
+print(dictionary['a'])  #  [1,2,3,4]
+print(dictionary['a'][1])  #  2
+
+my_list = [
+     {
+'a': [1,2,3],
+'b':'hello',
+'c':True
+},
+{
+'a': [4,5,6],
+'b':'hello',
+'c':True
+}
+]
+print(my_list[0])  # This prints the firt Item
+print(my_list[0]['a'][1])  # This prints 2
+
+
 friends = {
 'tom' : '111-222-333',
-'jerry' : '666-33-111'
+'jerry' : '666-33-111',
 }
 
 dict_emp = {} # this will create an empty dictionary
@@ -76,13 +101,13 @@ Dictionary methods
 Python provides several built-in methods for working with dictionaries.
 
 Methods	       Description
-popitem()	     Returns randomly selected item from the dictionary and also remove the selected item.
+popitem()	       Returns randomly selected item from the dictionary and also remove the selected item.
 clear()	       Delete everything from a dictionary
-keys()	        Return keys in the dictionary as tuples
-values()	      Return values in dictionary as tuples
-get(key)	      Return value of key, if key is not found it returns None, instead of throwing KeyError
-               exception
-pop(key)	      Remove the item from the dictionary, if the key is not found KeyError will be thrown
+keys()	       Return keys in the dictionary as tuples
+values()	       Return values in dictionary as tuples
+get(key)	       Return value of key, if key is not found it returns None, instead of throwing KeyError
+                 exception
+pop(key)	       Remove the item from the dictionary, if the key is not found KeyError will be thrown
 """
 
 friends = {'tom': '111-222-333', 'bob': '888-999-666', 'jerry': '666-33-111'}
