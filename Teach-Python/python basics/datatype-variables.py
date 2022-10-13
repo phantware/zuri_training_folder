@@ -1,4 +1,6 @@
-# Variables are named locations that are used to store references to the object stored in memory. The names we choose for variables and functions are commonly known as Identifiers. In Python, Identifiers must obey the following rules.
+# Variables are named locations that are used to store references to the object stored in memory. 
+# The names we choose for variables and functions are commonly known as Identifiers. 
+# In Python, Identifiers must obey the following rules.
 
 '''
 All identifiers must start with a letter or underscore (_), you can't use digits. For e.g: my_var is a valid identifier but 1digit is not.
