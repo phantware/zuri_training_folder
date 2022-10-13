@@ -13,6 +13,17 @@ list1 = list() # Create an empty list
 list2 = list([22, 31, 61]) # Create a list with elements 22, 31, 61
 list3 = list(["tom", "jerry", "spyke"]) # Create a list with strings
 list5 = list("python") # Create a list with characters p, y, t, h, o, n
+# List unpacking
+a,b,c = 1,2,3
+a,b,c, *others = [1,2,3,4,5,6,7,8,9]   # unpacking list
+a,b,c, *others, d = [1,2,3,4,5,6,7,8,9]   # unpacking list
+
+
+print(a) # result = 1
+print(b) # result = 2
+print(c) # result = 3
+print(others)  # result = [4,5,6,7,8,9]
+print(d) # result = 9
 
 # Accessing elements in list #
 # You can use index operator ([]) to access individual elements in the list. List index starts from 0.
