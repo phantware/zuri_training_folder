@@ -37,6 +37,14 @@ def get_sum(num1, num2):
 
 print(get_sum(5,4)) # We get value of None as a result
 
+# Returning multiple value
+def mult_divide(num1, num2):
+  return (num1 * num2), (num1 / num2)
+mult, divide = mult_divide(5,4)
+print("5 * 4 =",mult)
+print("5 / 4 =",divide)
+
+
 
 # defining a function in python
 # num_3 = "3.142"
