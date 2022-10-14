@@ -32,7 +32,10 @@ def change_name2():
 change_name2()
 print(gbl_name)
 
+def get_sum(num1, num2):
+  sum = num1 + num2
 
+print(get_sum(5,4)) # We get value of None as a result
 
 
 # defining a function in python
