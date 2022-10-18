@@ -35,10 +35,10 @@ Reading data from the file #
 To read data back from the file you need one of these three methods.
 
 Methods	          Description
-read([number]) 	  Return specified number of characters from the file. if omitted it will read the entire
-                  contents of the file.
-readline() 	      Return the next line of the file.
-readlines() 	     Read all the lines as a list of strings in the file
+read([number]) 	 Return specified number of characters from the file. if omitted it will read the entire
+                   contents of the file.
+readline() 	       Return the next line of the file.
+readlines() 	    Read all the lines as a list of strings in the file
 """
 #  Reading all the data at once.
 
