@@ -71,6 +71,20 @@ for key in friends:
 # tom : 111-222-333 
 # jerry : 666-33-111
 
+# Using for loop to get both the keys and values
+
+for k, v in friends.items():
+     print(k,v)
+# tom 111-222-333 jerry 666-33-111
+print(friends.get("tom", "Not here")) # 111-222-333
+
+# To delete a key our value, use del
+del friends["tom"] # tom will be removed
+
+# Looping through our dictionary keys
+for i in friends:
+     print(i)
+
 """
 Find the length of the dictionary
 You can use the len() function to find the length of the dictionary.
