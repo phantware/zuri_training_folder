@@ -7,7 +7,9 @@ name2 = str("newstring") # string object containing 'newstring'
 # Operations on string #
 # String index starts from 0, so to access the first character in the string type:
 
-name[0] # t
+print(name.index('m'))  # 2
+
+print(name[0]) # t
 
 # The + operator is used to concatenate string and * operator is a repetition operator for string.
 
@@ -133,7 +135,7 @@ startswith(s1: str): bool	      Returns True if strings starts with substring s1
 count(substring): int	          Returns number of occurrences of substring the string
 find(s1): int	                  Returns lowest index from where s1 starts in the string, if string not
                                 found returns -1
-rfind(s1): int	                 Returns highest index from where s1 starts in the string, if string not
+rfind(s1): int	                Returns highest index from where s1 starts in the string, if string not
                                 found returns -1
 """
 
@@ -155,13 +157,14 @@ Converting Strings
 
 Method name	           Method Description
 capitalize(): str	     Returns a copy of this string with only the first character capitalized.
-lower(): str	          Return string by converting every character to lowercase
-upper(): str	          Return string by converting every character to uppercase
-title(): str	          This function return string by capitalizing first letter of every word in the string
+lower(): str	         Return string by converting every character to lowercase
+upper(): str	         Return string by converting every character to uppercase
+title(): str	         This function return string by capitalizing first letter of every word in the string
 swapcase(): str	       Return a string in which the lowercase letter is converted to uppercase and
                        uppercase to lowercase
 replace(old\, new):str	This function returns new string by replacing the occurrence of old string with new
-                        string
+                        string  
+[::-1]                  This is used to reverse a string
 """
 
 s = "string in python"
@@ -171,7 +174,7 @@ s1 # 'String in python'
 
 s2 = s.title()
 s2 # 'String In Python'
-
+ 
 s = "This Is Test"
 s3 = s.lower()
 s3 # 'this is test'
@@ -184,4 +187,6 @@ s5 # 'tHIS iS tEST'
 
 s6 = s.replace("Is", "Was")
 s6 # 'This Was Test'
-s # 'This Is Test'
+
+print(s[::-1]) # nohtyp ni gnirts 
+
