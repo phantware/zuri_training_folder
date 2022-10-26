@@ -1,0 +1,75 @@
+1. Who should learn to program?
+
+a = College students.
+b = People who want to become software developers.
+c = Everyone. (Answer)
+
+2. Where are your programs stored when they are running?
+
+
+a = Hard Drive.
+b = Memory. (Answer)
+c = Central Processing Unit.
+
+3. What will print out after running these two lines of code:
+
+x = 6
+print(x)
+
+
+a = x
+b = 6 (Answer)
+c = x = 6
+d = (x)
+
+4. What will the following program print out:
+
+x = 43
+x = x + 1
+print(x)
+
+a = x
+b = x + 1
+c = 44 (Answer)
+
+5. What is the symbol used in an assignment statement?
+
+
+a = ~
+b = &
+c = = (Answer)
+d = |
+
+6. What will print out after running this code:
+
+width = 15
+height = 12.0
+print(height/3)
+
+a = 39
+b = 4
+c = 4.0 (Answer)
+d = 5.0
+e  = 5
+
+7. Which code is indented correctly to print "Yes" if x = 0 and y = 10?
+
+(a)
+if 0 == x:
+if y == 10:
+print("Yes")
+
+(b)
+if 0 == x:
+    if y == 10:
+    print("Yes")
+
+(c)
+if 0 == x:
+if y == 10:
+    print("Yes")
+
+(d)
+if 0 == x:
+    if y == 10:
+        print("Yes")
