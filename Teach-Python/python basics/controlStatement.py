@@ -1,13 +1,13 @@
 # But before we learn control statement, we need to learn about relational operators. Relational operators allows us to compare two objects.
 
 '''
-Symbol	    Description
-<=	        smaller than or equal to
-< 	        smaller than
-> 	        greater than
->= 	       greater than or equal to
-== 	       equal to
-!= 	       not equal to
+Symbol	      Description
+<=	            smaller than or equal to
+< 	            smaller than
+> 	            greater than
+>= 	         greater than or equal to
+== 	         equal to
+!= 	         not equal to
 
 The result of comparision will always be a boolean value i.e True or False. Remember that, True and False are python keyword for denoting boolean values
 '''

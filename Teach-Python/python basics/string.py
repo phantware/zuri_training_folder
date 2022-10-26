@@ -165,7 +165,9 @@ swapcase(): str	       Return a string in which the lowercase letter is converte
 replace(old\, new):str	This function returns new string by replacing the occurrence of old string with new
                         string  
 [::-1]                  This is used to reverse a string
-split()                 returns a list of all the words in the string in an array like format
+split()                 returns a list of all the words in the string in an array like format.
+ join()                 returns a string in which the string elements of sequence have been joined by 
+                        str separator.
 """
 
 s = "string in python"
@@ -193,4 +195,9 @@ print(s[::-1]) # nohtyp ni gnirts
 str = "Line1-abcdef \nLine2-abc \nLine4-abcd";
 str.split( ) # ['Line1-abcdef', 'Line2-abc', 'Line4-abcd']
 str.split(' ', 1 ) # ['Line1-abcdef', '\nLine2-abc \nLine4-abcd']
+
+s = "-";
+seq = ("a", "b", "c"); # This is sequence of strings.
+s.join( seq ); #  'a-b-c'
+
 

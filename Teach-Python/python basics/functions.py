@@ -1,4 +1,7 @@
 '''
+In Python, a function is a group of related statements that performs a specific task
+Functions help break our program into smaller and modular chunks. As our program grows larger and larger, functions make it more organized and manageable
+ 
 Creating functions
 Python uses def  keyword to start a function, here is the syntax:
 
