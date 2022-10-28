@@ -1,11 +1,18 @@
 name = input("What is your name? ")
-allowedUser = ["Seyi","Mike","Love"]
-allowedPassword = "Password"
+allowedUsers = ["Seyi","Mike","Love"]
+# allowedPassword = "Password"
+allowedPassword = ["seyi12345", "mike12345","love01"]
 
-if(name in allowedUser):
+# newUser = input("Please enter your name ")
+# allowedUser.append(newUser)
+# print('allowed user', allowedUsers)
+
+
+if(name in allowedUsers):
  password = input("Your password? ")
+ userId = allowedUsers.index(name)
 
- if(password == allowedPassword):
+ if(password == allowedPassword[userId]):
   print("Welcome " + name)
  else:
   print("Password Incorrect, please try again")
