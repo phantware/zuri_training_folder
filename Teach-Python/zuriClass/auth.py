@@ -72,7 +72,29 @@ def register():
  login() 
  
 def bankOperations(user):
- print("Some operations ")
+ print("Welcome %s %s " % (user[0], user[1]))
+ 
+ selectedOption = int(input("What would you like to do? Select (1) for Deposite, (2) for Withdrawal, (3) for Logout, (4) for Exit"))
+ 
+ if(selectedOption == 1):
+  depositOperation()
+ elif(selectedOption == 2):
+  withdrawalOperation()
+ elif(selectedOption == 3):
+  login()
+ elif(selectedOption == 4):
+  exit()
+ else:
+  print("Invalid option selected")
+  bankOperations(user)
+ 
+
+def withdrawalOperation():
+ print("Withdrawal Operation")
+ 
+def depositOperation():
+ print("Deposit Operation")
+ 
  
 def generateAccountNumber():
  return random.randrange(1111111111,9999999999)
