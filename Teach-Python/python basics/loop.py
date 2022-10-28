@@ -42,6 +42,14 @@ for i in range(1, 20, 2):
     print(i)
 
 #Expected Output: 1 3 5 7 9 11 13 15 17 19
+
+for x in range(10):
+    if(not(x==0)):
+        print(x)
+        
+#Expected Output: 1 2 3 4 5 6 7 8 9
+
+
 """
  While loop
 Syntax:
