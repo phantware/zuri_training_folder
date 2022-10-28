@@ -1,5 +1,5 @@
 # register
-# username, password, email
+# first name, last name, password, email
 # generate user account
 
 # login
@@ -9,7 +9,9 @@
 
 # Initialize the system
 
-database = {}
+import random
+
+database = {} # Dictionary
 def init():
  
  isValidOption = False;
@@ -20,28 +22,46 @@ def init():
  while isValidOption == False:
    haveAccount = int(input("Do you have an account with us? Enter 1 to login or 2 to register: "))
    if(haveAccount == 1):
-    isValidOption = TRUE
+    isValidOption = True
     login()
      
    elif(haveAccount == 2):
-    isValidOption = TRUE
-    register()
+    isValidOption = True
+    print(register())
    else:
     print("You have selected an invalid option, please try again")
     print()
 
 
 def login():
- print("This is the login function ")
+ print("Login to your account")
+ print()
+ 
+ bankOperations()
 
 def register():
- print("This is the register function ")
-
+ print("Welcome to register page, kindly provide your details below")
+ print()
+ 
+ firstName = input("Please enter your First Name: ")
+ lastName = input("Please enter your Last Name: ")
+ email = input("Please enter your email: ")
+ password = input("Please enter your password: ")
+ accountNumber = generateAccountNumber()
+ 
+ database[accountNumber] = [firstName, lastName, email, password]
+ print()
+ print("Your account has been successfully created")
+ print()
+ login() 
+ 
 def bankOperations():
  print("Some operations ")
  
 def generateAccountNumber():
- print("Account number generator ")
+ return random.randrange(1111111111,9999999999)
+# print(generateAccountNumber())
+
 
 
 ### ACTUAL BANKING SYSTEM ###
