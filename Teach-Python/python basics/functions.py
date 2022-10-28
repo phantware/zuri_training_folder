@@ -13,6 +13,12 @@ def function_name(arg1, arg2, arg3, .... argN):
 def myfunc():
     pass
 '''
+def nameOfFunction():
+    print("This is a function")
+
+nameOfFunction()  # This is a function
+nameOfFunction()  # This is a function
+nameOfFunction()  # This is a function
 
 def sum(start, end):
    result = 0
