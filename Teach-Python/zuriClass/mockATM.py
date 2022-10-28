@@ -14,6 +14,26 @@ if(name in allowedUsers):
 
  if(password == allowedPassword[userId]):
   print("Welcome " + name)
+  
+  print("These are the available options: ")
+  print("1. Withdrawal")
+  print("2. Cash Deposit")
+  print("3. Complaint")
+
+  selectedOption = int(input("Please select an option "))
+  
+  if(selectedOption == 1):
+   print("You selected %s" % selectedOption)
+   print
+  elif(selectedOption == 2):
+   print("You selected %s" % selectedOption)
+   print
+  elif(selectedOption == 3):
+   print("You selected %s" % selectedOption)
+   print
+  else:
+   print("Invalid option selected, please try again")
+  
  else:
   print("Password Incorrect, please try again")
 
