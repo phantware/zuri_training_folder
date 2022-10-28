@@ -20,6 +20,16 @@ nameOfFunction()  # This is a function
 nameOfFunction()  # This is a function
 nameOfFunction()  # This is a function
 
+def nameOfFunction(name, count):
+    print("%s call function with count %d" (name, count))
+
+nameOfFunction(4)  # Seyi call function with count 4
+
+def nameOfFunction(count):
+    print("This is a function %d" %count)
+
+nameOfFunction(4)  # This is a function 4
+
 def sum(start, end):
    result = 0
    for i in range(start, end + 1):
