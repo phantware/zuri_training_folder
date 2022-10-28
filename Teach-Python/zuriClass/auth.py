@@ -36,8 +36,19 @@ def init():
 def login():
  print("Login to your account")
  print()
+ isLoginSuccessful = False
  
- bankOperations()
+ while isLoginSuccessful == False:
+  accountNumberFromUser = int(input("What is your account number? "))
+  password = input("What is your password ")
+  
+  for accountNumber, userDetails in database.items():
+   if(accountNumber == accountNumberFromUser):
+    if(userDetails[3] == password):
+     isLoginSuccessful = True;
+  print("Invalid account or password")
+ 
+ bankOperations(userDetails)
 
 def register():
  print("Welcome to register page, kindly provide your details below")
@@ -52,10 +63,15 @@ def register():
  database[accountNumber] = [firstName, lastName, email, password]
  print()
  print("Your account has been successfully created")
- print()
+ print(" == === ==== ===== ==== === == ")
+ print("Your account number is: %d" % accountNumber)
+ print("Make sure you keep it safe")
+ print(" == === ==== ===== ==== === == ")
+ 
+ 
  login() 
  
-def bankOperations():
+def bankOperations(user):
  print("Some operations ")
  
 def generateAccountNumber():
