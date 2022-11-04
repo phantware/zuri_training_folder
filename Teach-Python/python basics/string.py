@@ -49,10 +49,11 @@ ord('A') # 65
 
 """
 String Functions in Python
-Function name	Function Description
-len()	returns length of the string
-max()	returns character having highest ASCII value
-min()	returns character having lowest ASCII value
+
+Function name	        Function Description
+len()	                returns length of the string
+max()	                returns character having highest ASCII value
+min()	                returns character having lowest ASCII value
 """
 len("hello") # 5
 
