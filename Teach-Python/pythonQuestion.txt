@@ -1,3 +1,5 @@
+                                Question 1
+
 1. Who should learn to program?
 
 a = College students.
@@ -75,3 +77,29 @@ if 0 == x:
         print("Yes")
 
 
+
+                                Question 2
+
+1. What is a palindrome ?
+
+    Answer: A palindrome is a word, phrase, or sequence that reads the same backwards as forwards
+
+2. List 5 examples of palindrome that you know
+
+    Answer: madam,redivider, deified, civic, radar, level
+
+3. what is a string?
+
+    Answer: A string is a sequence of characters enclosed in quotation marks.
+
+4. List 5 types of string methods that you now.
+
+5. Give one examples each of the methods listed in Question 4
+
+6. What will print out after running this code:
+s = 'Hello'
+s[::-1]
+
+(a) 'Hello'
+(b) Not found
+(c) 'olleH'  (Answer)
